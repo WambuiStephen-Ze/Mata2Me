@@ -28,8 +28,8 @@ router.get('/login', (req, res) => {
 router.get('/:id', protect, getUser);
 
 // Router to handle all post requests for the users
-router.post('/register', upload.single('profilePic'), registerParent);
-router.post('/login', loginParent);
+router.post('/users/register', upload.single('profilePic'), registerParent);
+router.post('/users/login', loginParent);
 
 // Router to handle all put requests for the users
 router.put('/:id', protect, updateUserData);

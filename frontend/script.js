@@ -259,3 +259,22 @@ document.addEventListener("DOMContentLoaded", () => {
     loginUser();
   }
 });
+
+// payment
+document.getElementById('payNowBtn').addEventListener('click', async () => {
+    try {
+        const response = await fetch('/api/payment-details');
+        const data = await response.json();
+
+        // Fill in the info
+        document.getElementById('companyName').textContent = data.companyName;
+        document.getElementById('paybill').textContent = data.paybill;
+        document.getElementById('accountNumber').textContent = data.accountNumber;
+
+        // Show the section
+        document.getElementById('paymentInfo').style.display = 'block';
+    } catch (error) {
+        console.error('Error fetching payment details:', error);
+        alert('Failed to load payment details. Please try again.');
+    }
+});

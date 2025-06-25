@@ -45,11 +45,11 @@ router.get('/', async (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend', 'sitters.html'));
 });
 
-router.get('/signup', (req, res) => {
+router.get('/sitters/signup', (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend', 'signup.html'));
 });
 
-router.get('/login', (req, res) => {
+router.get('/sitters/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../../frontend', 'sitter.login.html'));
 });
 
