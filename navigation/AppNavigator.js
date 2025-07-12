@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
+
+/* Screens */
 import HomeScreen from '../screens/HomeScreen';
 import MapScreen from '../screens/MapScreen';
-import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
